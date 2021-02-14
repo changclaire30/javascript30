@@ -10,3 +10,7 @@ img {
     object-fit: cover;
     border-radius: 1em;
 }
+
+button:hover {
+    cursor: pointer;
+}
