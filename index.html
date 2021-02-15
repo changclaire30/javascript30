@@ -11,57 +11,72 @@
 <body>
     <div class="container justify-content-center">
         <div class="row justify-content-center">
-            <h1>JavaScript30</h1>
+            <h1 style="padding: 2em 0 0 0.5em;">JavaScript30  <span style="font-size: 0.5em;">Claire Chang</span></h1>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            
-            <div class="col">
-                <!-- <h3>Day 05 </h3> -->
-                <p>COMING SOON...</p>
-                <!-- <a href="./03-CSS-Variables/index-START.html">
-                    <img src="./03-CSS-Variables/snapshot.png">
-                </a> -->
-            </div>
-            <div class="col">
-                <h3>Day 05 Flex Panel Gallery</h3>
-                <a href="./05-Flex-Panel-Gallery/index-START.html">
-                    <img src="./05-Flex-Panel-Gallery/snapshot.png">
-                </a>
-            </div>
-            <div class="col">
-                <h3>Day 04 Array Cardio</h3>
-                <div style="display: flex; align-items: center; justify-content: center;">
-                    <a href="./04-Array-Cardio-Day-1/index-START.html" style="text-decoration: none; display: block;">
-                        <button style="flex: 1; padding: 2em; border-radius: 1em;">
-                            VIEW MORE
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <hr style="border: 0.5px solid rgba(0, 0, 0, 0.1)" />
-        <div class="row">
-            <div class="col">
-                <h3>Day 03 CSS Variables</h3>
-                <a href="./03-CSS-Variables/index-START.html">
-                    <img src="./03-CSS-Variables/snapshot.png">
-                </a>
-            </div>
-            <div class="col">
-                <h3>Day 02 Clock</h3>
-                <a href="./02-JS-and-CSS-Clock/index-START.html">
-                    <img src="./02-JS-and-CSS-Clock/snapshot.png">
-                </a>
-            </div>
-            <div class="col">
-                <h3>Day 01 Drum Kit</h3>
-                <a href="./01-JavaScript-Drum-Kit/index-START.html">
-                    <img src="./01-JavaScript-Drum-Kit/snapshot.png">
-                </a>
-            </div>
+    <div class="container" style="padding: 2em 0;">
+        <div class="row projects">
         </div>
     </div>
 </body>
+
+<script id="projects" type="application/json">
+    [
+    {
+        "title": "Coming Soon...",
+        "link": "./index.html",
+        "image": "./coming.jpg"
+    },
+    {
+        "title": "Day 06 Type Ahead",
+        "link": "./06-Type-Ahead/index-START.html",
+        "image": "./06-Type-Ahead/snapshot.png"
+    },
+    {
+        "title": "Day 05 Flex Panel Gallery",
+        "link": "./05-Flex-Panel-Gallery/index-START.html",
+        "image": "./05-Flex-Panel-Gallery/snapshot.png"
+    },
+    {
+        "title": "Day 04 Array Cardio",
+        "link": "./04-Array-Cardio-Day-1/index-START.html",
+        "image": "./04-Array-Cardio-Day-1/snapshot.jpg"
+    },
+    {
+        "title": "Day 03 CSS Variables",
+        "link": "./03-CSS-Variables/index-START.html",
+        "image": "./03-CSS-Variables/snapshot.png"
+    },
+    {
+        "title": "Day 02 Clock",
+        "link": "./02-JS-and-CSS-Clock/index-START.html",
+        "image": "./02-JS-and-CSS-Clock/snapshot.png"
+    },
+    {
+        "title": "Day 01 Drum Kit",
+        "link": "./01-JavaScript-Drum-Kit/index-START.html",
+        "image": "./01-JavaScript-Drum-Kit/snapshot.png"
+    }
+    ]
+</script>
+
+<script>
+
+var jsonData = JSON.parse(document.getElementById('projects').textContent)
+console.log(jsonData)
+
+const html = jsonData.map(project => {
+    return `
+        <div class="col-4">
+            <h3>${project.title}</h3>
+            <a href="${project.link}">
+                <img src="${project.image}">
+            </a>
+        </div>
+    `
+}).join('');
+
+document.querySelector('.projects').innerHTML = html;
+
+</script>
 </html>
