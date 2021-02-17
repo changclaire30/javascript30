@@ -28,6 +28,11 @@
         "image": "./coming.jpg"
     },
     {
+        "title": "Day 07 Array Cardio 2",
+        "link": "./07-Array-Cardio-Day-2/index-START.html",
+        "image": "./04-Array-Cardio-Day-1/snapshot.jpg"
+    },
+    {
         "title": "Day 06 Type Ahead",
         "link": "./06-Type-Ahead/index-START.html",
         "image": "./06-Type-Ahead/snapshot.png"
@@ -67,10 +72,10 @@ console.log(jsonData)
 
 const html = jsonData.map(project => {
     return `
-        <div class="col-4">
+        <div class="col-md-4">
             <h3>${project.title}</h3>
             <a href="${project.link}">
-                <img src="${project.image}">
+                <img id="image" src="${project.image}">
             </a>
         </div>
     `
