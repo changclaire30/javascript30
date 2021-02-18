@@ -11,3 +11,4 @@ Check my progress [here](https://changclaire30.github.io/javascript30/).
 [04 Array Cardio](https://changclaire30.github.io/javascript30/04-Array-Cardio-Day-1/index-START.html)  
 [06 Type Ahead](https://changclaire30.github.io/javascript30/06-Type-Ahead/index-START.html)  
 [07 Array Cardio 2](https://changclaire30.github.io/javascript30/07-Array-Cardio-Day-2/index-START.html)  
+[08 HTML Canvas](https://changclaire30.github.io/javascript30/07-Array-Cardio-Day-2/index-START.html)  
